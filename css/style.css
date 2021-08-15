@@ -1,0 +1,271 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgb(221, 194, 255), #fff);
+    background-repeat: no-repeat;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    font-family: 'Crimson Text', serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(155, 128, 190);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+p {
+    font-size: 18px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 5px;
+}
+
+.logo a:hover {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 5px;
+    transition: 0.5s;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-links a:hover {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(155, 128, 190);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#title {
+    margin-top: 140px;
+    color: #000;
+    text-align: center;
+    font-size: 4em;
+}
+
+.subtitle {
+    margin-top: 50px;
+    color: #000;
+    text-align: center;
+}
+
+#home-img {
+    height: 400px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+#footer {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+#intro {
+    margin-top: 200px;
+    margin-left: 50px;
+    padding-top: 10vh;
+}
+
+#intro > h2:first-of-type{
+    font-size: 36px;
+}
+
+#card_section {
+    margin-top: 200px;
+    margin-left: 50px;
+    padding-top: 10vh;
+}
+
+#card_section > h2:first-of-type{
+    font-size: 36px;
+}
+
+#contact-section {
+    padding-top: 10vh;
+}
+
+.cards {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 20px;
+    align-content: center;
+}
+
+.card {
+    border-style: solid;
+    border-color: rgb(250, 215, 229);
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px 10px rgb(221, 194, 255);
+    transition: 0.5s;
+}
+
+.card_img {
+    width: 100%;
+    display: block;
+    border-radius: 5px 5px 0 0;
+}
+
+.card_text {
+    color: black;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+.card_text > p:first-of-type {
+    margin-top: 0;
+}
+
+.card_link {
+    text-decoration: none;
+}
+
+.contact-prompt {
+    text-align: center;
+}
+
+.resume-button {
+    background:rgb(250, 215, 229);
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+
+    width: 50%;
+    line-height: 15%;
+    border-radius: 10%;
+    padding: 5px;
+}
+
+.resume-button:hover {
+    background:rgb(260, 225, 239);
+    color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-pic {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+
+    text-decoration: none;
+}
+
+.img-link {
+    text-decoration: none;
+}
