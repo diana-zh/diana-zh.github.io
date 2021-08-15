@@ -5,11 +5,13 @@
 }
 
 body {
-    background: linear-gradient(rgb(221, 194, 255), #fff);
+    /* background: linear-gradient(rgb(221, 194, 255), #fff); */
+    background: #0c0d1a;
     background-repeat: no-repeat;
     max-width: 100% !important;
     max-height: 100% !important;
     font-family: 'Crimson Text', serif;
+    color: white; /* here */
 }
 
 nav {
@@ -52,12 +54,14 @@ p {
 
 .nav-links a {
     color: white;
+    font-weight: bold;
     text-decoration: none;
     font-size: 24px;
 }
 
 .nav-links a:hover {
     color: black;
+    font-weight: bold;
     text-decoration: none;
     font-size: 24px;
     transition: 0.5s;
@@ -140,14 +144,24 @@ html {
 
 #title {
     margin-top: 140px;
-    color: #000;
+    color: white; /* here */
     text-align: center;
     font-size: 4em;
+
+}
+
+#title:hover {
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px rgb(155, 128, 190);
+    transition: 0.5s;
 }
 
 .subtitle {
     margin-top: 50px;
-    color: #000;
+    color: white; /* here */
     text-align: center;
 }
 
@@ -175,14 +189,33 @@ html {
     font-size: 36px;
 }
 
+#intro > h2:first-of-type:hover{
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px rgb(155, 128, 190);
+    transition: 0.5s;
+}
+
 #card_section {
     margin-top: 200px;
-    margin-left: 50px;
     padding-top: 10vh;
 }
 
 #card_section > h2:first-of-type{
     font-size: 36px;
+    margin-left: 50px;
+    padding-bottom: 5vh;
+}
+
+#card_section > h2:first-of-type:hover{
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px rgb(155, 128, 190);
+    transition: 0.5s;
 }
 
 #contact-section {
@@ -212,11 +245,11 @@ html {
 .card_img {
     width: 100%;
     display: block;
-    border-radius: 5px 5px 0 0;
+    border-radius: 1px 1px 0 0;
 }
 
 .card_text {
-    color: black;
+    color: white; /* here */
     line-height: 1.5;
     padding: 15px;
 }
@@ -269,3 +302,4 @@ html {
 .img-link {
     text-decoration: none;
 }
+
